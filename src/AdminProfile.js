@@ -41,7 +41,9 @@ function profile() {
             <NavLink exact to="/homeUser">
             <img src={Home} /></NavLink>
             <img src={mapIcon} />
+            <NavLink exact to="/dashboard">
             <img src={modelIcon} />
+            </NavLink>
             <img src={modeIcon} />
             <NavLink exact to="/adminProfile">
             <img src={profileIcon} /></NavLink>
