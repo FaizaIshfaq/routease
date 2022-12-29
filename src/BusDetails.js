@@ -176,9 +176,12 @@ function BusDetail() {
             <div className='nav'>
             <NavLink exact to="/homeUser">
             <img src={Home} /></NavLink>
-            <img src={mapIcon} />
-            <img src={modelIcon} />
-            <img src={modeIcon} />
+            <NavLink exact to="javascript(void);">
+            <img src={mapIcon} /></NavLink>
+            <NavLink exact to="/dashboard">
+            <img src={modelIcon} /></NavLink>
+            <NavLink exact to="javascript(void);">
+            <img src={modeIcon} /></NavLink>
             <NavLink exact to="/adminProfile">
             <img src={profileIcon} /></NavLink>
             </div>

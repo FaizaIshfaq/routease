@@ -21,6 +21,7 @@ import StopDetails from './StopDetails.js';
 import UpdateStop from './UpdateStopDetail.js';
 import BusDetails from './BusDetails.js';
 import ErrorPage from './ErrorPage.js';
+import RouteDetails from './RouteDetails.js';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <Route exact path="/updateStop" component={UpdateStop} />
       <Route exact path="/busDetails" component={BusDetails} />
       <Route exact path="/error" component={ErrorPage} />
+      <Route exact path="/routeDetails" component={RouteDetails} />
      </Switch>
     </>
   );

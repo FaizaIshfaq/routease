@@ -19,12 +19,14 @@ function dashboard() {
             <img className='arrowBack' src={arrow} alt='back' /> 
             </NavLink>
             <div className='stopDetails'>
-                <h3>Stop Details</h3>
+                <h3>Route Details</h3>
                 <div>
-                    <label className='stopLabel'>New Stop Name</label>
+                    <label>Enter Route</label>
                     <input type="text" name="route" />
                 </div>
+            <NavLink exact to='/dashboard'>
                 <button>Show</button>
+                </NavLink>
 
             </div>
             </div>    

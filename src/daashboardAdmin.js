@@ -26,12 +26,24 @@ function dashboard() {
             <h2>Dashboard</h2><br />
             <p>Hi Admin, Welcome back</p>
             <div className='functionalOptions'>
+                <NavLink exact to="/addBus">
                 <button>Add Bus</button>
+                </NavLink> 
+                <NavLink exact to="/addRoute">
                 <button>Add Route</button>
+                </NavLink> 
+                <NavLink exact to="/addStop">
                 <button>Add Stops</button>
+                </NavLink> 
+                <NavLink exact to="/stopDetails">
                 <button>Stop Details</button>
+                </NavLink>
+                 <NavLink exact to="/busDetails">
                 <button>Bus Details</button>
+                </NavLink>
+                <NavLink exact to="/routeDetails">
                 <button>Route Details</button>
+                </NavLink>
             </div>
 
             </div>
@@ -39,9 +51,12 @@ function dashboard() {
             <div className='nav'>
             <NavLink exact to="/homeUser">
             <img src={Home} /></NavLink>
-            <img src={mapIcon} />
-            <img src={modelIcon} />
-            <img src={modeIcon} />
+            <NavLink exact to="javascript(void);">
+            <img src={mapIcon} /></NavLink>
+            <NavLink exact to="/dashboard">
+            <img src={modelIcon} /></NavLink>
+            <NavLink exact to="javascript(void);">
+            <img src={modeIcon} /></NavLink>
             <NavLink exact to="/adminProfile">
             <img src={profileIcon} /></NavLink>
             </div>

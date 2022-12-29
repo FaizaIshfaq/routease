@@ -24,7 +24,9 @@ function dashboard() {
                     <label>Enter Route</label>
                     <input type="text" name="route" />
                 </div>
+            <NavLink exact to='/dashboard'>
                 <button>Show</button>
+                </NavLink>
 
             </div>
             </div>    
@@ -54,9 +56,12 @@ function dashboard() {
             <div className='nav'>
             <NavLink exact to="/homeUser">
             <img src={Home} /></NavLink>
-            <img src={mapIcon} />
-            <img src={modelIcon} />
-            <img src={modeIcon} />
+            <NavLink exact to="javascript(void);">
+            <img src={mapIcon} /></NavLink>
+            <NavLink exact to="/dashboard">
+            <img src={modelIcon} /></NavLink>
+            <NavLink exact to="javascript(void);">
+            <img src={modeIcon} /></NavLink>
             <NavLink exact to="/adminProfile">
             <img src={profileIcon} /></NavLink>
             </div>

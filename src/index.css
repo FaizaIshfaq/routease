@@ -701,9 +701,6 @@
 .bioData .asteric{
   padding: 9px 7px 5px 7px;
 }
-.select{
-  border: 1px solid black;
-}
 
 /*Admin Dashboard*/
 .topdiv{
@@ -768,9 +765,13 @@
   padding: 13px 0;
   display: block;
   margin: 0 auto;
+  text-decoration: none;
   background-color: var(--white);
   border: none;
   border-bottom:1px solid var(--lines);
+}
+.functionalOptions a{
+  text-decoration: none;
 }
 .functionalOptions button:hover{
   color: white;
@@ -780,7 +781,7 @@
   cursor: pointer;
 }
 .addThings{
-  width: 80%;
+  width: 83%;
   z-index: 1;
   position: absolute;
   top: 20%;
