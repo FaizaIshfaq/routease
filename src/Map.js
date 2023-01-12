@@ -42,8 +42,28 @@ function Livemap() {
     iconUrl:markerR6,
     iconSize: size,
   });
+
+    // if(!navigator.geolocation){
+  //   console.log("Your browser doesn't support geolocation feature!")
+  // }
+  // else{
+  //   navigator.geolocation.getCurrentPosition(getPosition)
+  // }
+  // //getting live location
+  // function getPosition(position){
+  //   // console.log(position)
+  //   var lat=position.coords.latitude
+  //   var long=position.coords.longitude
+  //   var accuracy=position.coords.accuracy
+    
+   
+  //   var markerpos= new L.latLng(lat,long)
+  //   markerIcon1.setLatLng(markerpos)
+  //   console.log(lat,long,accuracy)
+  // }
+  
   return (
-        <MapContainer zoomControl={false} center={center} zoom={ZOOM_LEVEL} scrollWheelZoom={false} style={{width:'100%',height:'100%'}}>
+        <MapContainer zoomControl={false} center={center} zoom={ZOOM_LEVEL} scrollWheelZoom={true} style={{width:'100%',height:'100%'}}>
     <TileLayer
       attribution={mapLink.maptiler.attribution} url={mapLink.maptiler.url}
     />

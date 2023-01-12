@@ -304,7 +304,6 @@
   font-family:'Noto Sans JP', sans-serif;
   font-size: 0.8rem;
   margin-left: 30px;
-  margin-top: -15px;
   display: none;
 }
 
@@ -323,20 +322,26 @@
   padding-top: 10px;
   width: 20%;
   margin: 0px 7px 5px;
+  text-align: center;
 }
 .group1 input[type=text]{
   color: var(--naviBlue);
+  font-size: 1.5rem;
   opacity: 90%;
 }
 .group1 input[type=text]:focus{
   outline: none;
   color: var(--black);
   opacity: 100%;
+  font-weight: 400;
   border-color: var(--black);
 }
 .inputbox{
   margin-bottom: 10px;
   margin-top: -10px;
+}
+.inputbox p{
+  margin-top: 5px;
 }
 .resendlink{
   text-decoration: none;
@@ -348,7 +353,7 @@
   text-decoration: underline;
 }
 .btn4{
-  margin-top: -10px;
+  margin-top: -5px;
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
@@ -793,6 +798,10 @@
   box-sizing: border-box;
   border-radius: 8px;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+}
+.addThings button:hover{
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 .addThings h2{
   text-align: center;

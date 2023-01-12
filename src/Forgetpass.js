@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import {NavLink} from "react-router-dom";
 import arrow from './images/arrow.svg';
@@ -6,7 +6,19 @@ import forget from './images/forget.svg';
 import lock from './images/lock.svg';
 import at from './images/at.svg';
 
-function forgetPass() {
+function ForgetPass() {
+    
+    const [inputs,setInputs]=useState({})
+    
+    const handleChange=(e)=>{
+        const name=e.target.name;
+        const value=e.target.value;
+        setInputs(values=>({values,[name]:value}));
+    }
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(inputs);
+    }
   return (
         <div className='bg' >
              <div className='body'>
@@ -20,19 +32,20 @@ function forgetPass() {
             <h1>Forget <br />Password?</h1>
             <p>Don't worry it happens. Please enter your email address.</p>
             <div className='inputbox'>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label className='group'>
                         <img className='icon1' src={at} alt='emailIcon' />
-                       <input type="text" name="email" placeholder="Email" />
+                       <input type="text" name="email" placeholder="Email" onChange={handleChange} />
                     </label>
+                    <div className='emailerror'>Invalid Email</div>
+                    {/* <NavLink exact to="/resetPass"> */}
+                    <button className='btn2'>
+                        Submit
+                    </button>
+                    {/* </NavLink> */}
+                    
                 </form>
             </div>
-            <div className='emailerror'>Invalid Email</div>
-            <NavLink exact to="/resetPass">
-            <button className='btn2'>
-                Submit
-            </button>
-            </NavLink>
             </div>            
             </div>
             </div>
@@ -42,4 +55,4 @@ function forgetPass() {
   );
 }
 
-export default forgetPass;
+export default ForgetPass;

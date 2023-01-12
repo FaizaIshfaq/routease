@@ -22,6 +22,7 @@ import UpdateStop from './UpdateStopDetail.js';
 import BusDetails from './BusDetails.js';
 import ErrorPage from './ErrorPage.js';
 import RouteDetails from './RouteDetails.js';
+import TrackLocation from './TrackLocationMap.js';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
       <Route exact path="/busDetails" component={BusDetails} />
       <Route exact path="/error" component={ErrorPage} />
       <Route exact path="/routeDetails" component={RouteDetails} />
+      <Route exact path="/trackLocation" component={TrackLocation} />
      </Switch>
     </>
   );

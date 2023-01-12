@@ -19,7 +19,9 @@ function dashboard() {
                     <img src={logo} />
                     <h2 className='rease1'>REase</h2>
                     </div>
+                    <NavLink exact to="#">
                     <img src={menuIcon} />
+                    </NavLink>
                 </div>
             </div>
             <div className='dashboard'>

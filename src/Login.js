@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import {NavLink} from "react-router-dom";
 import arrow from './images/arrow.svg';
@@ -6,7 +6,20 @@ import Login from './images/login.svg';
 import lock from './images/lock.svg';
 import at from './images/at.svg';
 
-function login() {
+function Loginf() {
+
+    const [inputs,setInputs]=useState({})
+    
+    const handleChange=(e)=>{
+        const name=e.target.name;
+        const value=e.target.value;
+        setInputs(values=>({...values,[name]:value}));
+    }
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(inputs);
+    }
   return (
         <div className='bg' >
              <div className='body'>
@@ -20,28 +33,27 @@ function login() {
             <h1>Login</h1>
             <p className='invaliderror'>Invalid Credentials</p>
             <div className='inputbox'>
-                <form>
+            <form onSubmit={handleSubmit}>
                     <label className='group'>
                         <img className='icon1' src={at} alt='emailIcon' />
-                       <input type="text" name="email" placeholder="Email" />
+                       <input type="text" name="email" placeholder="Email" onChange={handleChange} />
                     </label><br />
                     <label className='group'>
                     <img className='icon' src={lock} alt='passIcon' />
-                    <input type="text" name="password" placeholder="Password" />
-                    </label>
-                </form>
-                <NavLink exact to="/forgetPass">
-                <a href='#'>Forget Password?</a>
-                </NavLink>
-                
+                    <input type="text" name="password" placeholder="Password" onChange={handleChange} />
+                    </label>    
+                    <NavLink exact to="/forgetPass">
+                        Forget Password?
+                    </NavLink>
+                    {/* <NavLink exact to="/homeUser"> */}
+                    <button className='btn2'>
+                        Login
+                    </button>
+                    {/* </NavLink> */}
+            </form>
             </div>
-            <NavLink exact to="/homeUser">
-            <button className='btn2'>
-                Login
-            </button>
-            </NavLink>
             <p className='anotherway'>New to <span>UET</span>? <NavLink exact to="/signup">
-                <a href='#'>SignUp</a>
+                SignUp
             </NavLink></p>
             </div>
            
@@ -55,4 +67,4 @@ function login() {
   );
 }
 
-export default login;
+export default Loginf;
