@@ -6,9 +6,10 @@ import arrow from './images/arrow.svg';
 import signup from './images/signup.svg';
 import lock from './images/lock.svg';
 import at from './images/at.svg';
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-
+    const navigate=useNavigate();
     const [inputs,setInputs]=useState({})
     
     const handleChange=(e)=>{
@@ -18,6 +19,10 @@ function Login() {
     }
     const handleSubmit=(e)=>{
         e.preventDefault();
+        axios.post("http://localhost/api/user/save",inputs).then(function(response){
+            console.log(response.data);
+            navigate('/login');
+        })
         console.log(inputs);
     }
 
@@ -25,7 +30,7 @@ function Login() {
         <div className='bg' >
              <div className='body'>
         <div className='select'>
-            <NavLink exact to='/selection'>
+            <NavLink to='/selection'>
             <img className='arrow' src={arrow} alt='back' /> 
             </NavLink>
             <div className='align2'>
@@ -44,7 +49,7 @@ function Login() {
                     <img className='icon' src={lock} alt='passIcon' />
                     <input type="text" name="password" placeholder="Password" onChange={handleChange} />
                     </label>
-                    {/* <NavLink exact to="/l"> */}
+                    {/* <NavLink to="/l"> */}
                     <button className='btn2 btn3'>
                     Continue
                     </button>
@@ -52,7 +57,7 @@ function Login() {
                 </form>
             </div>
             
-            <p className='anotherway anotherway1'>Joined us before? <NavLink exact to="/login">
+            <p className='anotherway anotherway1'>Joined us before? <NavLink to="/login">
             <span> Login</span>
             </NavLink></p>
             </div>

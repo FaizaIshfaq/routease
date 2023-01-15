@@ -10,15 +10,16 @@ import menuIcon from './images/menuIcon.svg';
 import logo from "./images/logo.svg";
 import dots from './images/dots.svg';
 import axios from 'axios';
-function BusDetail() {
+function StopDetail(props) {
+    const [countvar,setcountvar]=useState(1);
+    const [popupinfo,setpopupinfo]=useState(false);
     const [optionsvar,setOptions]=useState(false);
-    const [busdata,setbusdata]=useState([]);
-    const [deloption,setdeloption]=useState(false);
+    const [stopdata,setstopdata]=useState([]);
     const optionRef=useRef();
     const {id}=useParams();
+    const bus={};
     function handledisplay(event){
         setOptions(true)
-        
         console.log("3dots clicked");
     }
     useEffect(()=>{
@@ -26,7 +27,7 @@ function BusDetail() {
     },[]);
     function getBus(){
         axios.get("http://localhost/api/user/").then(function(response){
-        setbusdata(response.data);
+        setstopdata(response.data);
     })
     }
     useEffect(()=>{
@@ -39,21 +40,19 @@ function BusDetail() {
         return ()=>document.body.removeEventListener('mousedown',closeopt);
       });
       
-    function deletebus(id){
-        setTimeout(() => {
-            console.log("delete clicked:",id)
-            axios.delete(`http://localhost/api/user/${id}/delete`).then(function(response){
-                console.log(response.data); 
-                getBus();
-            })
-        }, 1000);
-        setTimeout(() => {
-            setdeloption(true);
-        }, 1400);
-        setTimeout(() => {
-            setdeloption(false);
-        }, 2700);
-        
+    function deletestop(id){
+        console.log(id)
+        axios.delete(`http://localhost/api/user/${id}/delete`).then(function(response){
+            console.log(response.data);
+            getBus();
+        })
+    }
+    function updatestop(id){
+        console.log(id)
+        axios.delete(`http://localhost/api/user/${id}/update`).then(function(response){
+            console.log(response.data);
+            getBus();
+        })
     }
   return (
         <div className='bg' >
@@ -69,22 +68,24 @@ function BusDetail() {
                 </div>
             </div>
             <div className='details'>
-            <h3>Bus Details</h3><br />
+            <h3>Stop Details</h3><br />
+            <p>Route 1 having Bus ID <span>C24329</span></p>
             <div className='functionalOptions1'>
                 <table><thead>
                     <tr>
-                        <th>Bus Ids</th>
-                        <th>Track Ids</th>
+                        <th>Stop No.</th>
+                        <th>Stop Name</th>
                         <th>Options</th>
                     </tr></thead><tbody>
-                    {busdata.map((bus,key)=>
+                    {stopdata.map((stop,key)=>
                     <tr key={key}>
-                        <td>{bus.busNo}</td>
-                        <td>{bus.trackerID}</td>
+                        <td>{stop.id}</td>
+                        <td>{stop.stopName}</td>
                         <td>
                             <img className='dotsThree' ref={optionRef} src={dots} onClick={handledisplay} />
                            {optionsvar&& <div className='dotOptions'>
-                            <button onClick={deletebus(bus.id)}>Delete</button>
+                            <button onClick={deletestop(bus.id)}>Delete</button>
+                            <button onClick={updatestop(bus.id)}>Update</button>
                             </div>
                             }
                         </td>
@@ -109,7 +110,7 @@ function BusDetail() {
             <img src={profileIcon} /></NavLink>
             </div>
             </div>
-            {deloption&&<div className='updatepopup'>Deleted Successfully</div>}
+            {popupinfo&&<div className='updatepopup'>Deleted Successfully</div>}
         </div>
         </div>
         </div>
@@ -117,4 +118,4 @@ function BusDetail() {
   );
 }
 
-export default BusDetail;
+export default StopDetail;

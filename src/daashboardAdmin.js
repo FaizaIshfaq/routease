@@ -19,7 +19,7 @@ function dashboard() {
                     <img src={logo} />
                     <h2 className='rease1'>REase</h2>
                     </div>
-                    <NavLink exact to="#">
+                    <NavLink to="#">
                     <img src={menuIcon} />
                     </NavLink>
                 </div>
@@ -28,22 +28,22 @@ function dashboard() {
             <h2>Dashboard</h2><br />
             <p>Hi Admin, Welcome back</p>
             <div className='functionalOptions'>
-                <NavLink exact to="/addBus">
+                <NavLink to="/addBus">
                 <button>Add Bus</button>
                 </NavLink> 
-                <NavLink exact to="/addRoute">
+                <NavLink to="/addRoute">
                 <button>Add Route</button>
                 </NavLink> 
-                <NavLink exact to="/addStop">
+                <NavLink to="/addStop">
                 <button>Add Stops</button>
                 </NavLink> 
-                <NavLink exact to="/stopDetails">
+                <NavLink to="/stopDetails">
                 <button>Stop Details</button>
                 </NavLink>
-                 <NavLink exact to="/busDetails">
+                 <NavLink to="/busDetails">
                 <button>Bus Details</button>
                 </NavLink>
-                <NavLink exact to="/routeDetails">
+                <NavLink to="/routeDetails">
                 <button>Route Details</button>
                 </NavLink>
             </div>
@@ -51,15 +51,15 @@ function dashboard() {
             </div>
             <div className='navbar'>
             <div className='nav'>
-            <NavLink exact to="/homeUser">
+            <NavLink to="/homeUser">
             <img src={Home} /></NavLink>
-            <NavLink exact to="javascript(void);">
+            <NavLink to="/trackLocation">
             <img src={mapIcon} /></NavLink>
-            <NavLink exact to="/dashboard">
+            <NavLink to="/dashboard">
             <img src={modelIcon} /></NavLink>
-            <NavLink exact to="javascript(void);">
+            <NavLink to="javascript(void);">
             <img src={modeIcon} /></NavLink>
-            <NavLink exact to="/adminProfile">
+            <NavLink to="/adminProfile">
             <img src={profileIcon} /></NavLink>
             </div>
             </div>

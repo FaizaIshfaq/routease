@@ -12,7 +12,7 @@ function getStarted() {
                 <img src={logo} />
                 <h1 className='rease'>REase</h1>
                 <p className='para1'>Track your route with  RouteEase</p>
-                <NavLink exact to="/selection">
+                <NavLink to="/selection">
                 <button className='btn1'>
                     Get Started
                 </button>

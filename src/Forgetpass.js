@@ -23,7 +23,7 @@ function ForgetPass() {
         <div className='bg' >
              <div className='body'>
         <div className='select1'>
-            <NavLink exact to='/login'>
+            <NavLink to='/login'>
             <img className='arrow' src={arrow} alt='back' /> 
             </NavLink>
             <div className='align2'>
@@ -38,7 +38,7 @@ function ForgetPass() {
                        <input type="text" name="email" placeholder="Email" onChange={handleChange} />
                     </label>
                     <div className='emailerror'>Invalid Email</div>
-                    {/* <NavLink exact to="/resetPass"> */}
+                    {/* <NavLink to="/resetPass"> */}
                     <button className='btn2'>
                         Submit
                     </button>

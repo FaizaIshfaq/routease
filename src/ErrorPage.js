@@ -13,7 +13,7 @@ function errorfunc() {
                     <div className='centerError'>
                         <h1>Oops! Something went wrong</h1><br />
                         <div>
-                        <NavLink exact to="/HomeUser">
+                        <NavLink to="/HomeUser">
                         <img src={arrow} /></NavLink>
                         <button>Go back to home</button>
                         </div>

@@ -8,6 +8,7 @@
   --white:white;
   --gray:#F5F5F5;
   --inputlines:rgba(37, 44, 61,0.6);
+  --backdropclr:rgba(19, 20, 73, 0.342);
   --black:#000000;
   --red:red;
   --royalBlue:#3252C9;
@@ -433,6 +434,36 @@
   position: relative;
   z-index: 1;
 }
+.distanceTime{
+  position: absolute;
+  z-index: 4;
+  top: 11%;
+  left: 20px;
+  width: 100px;
+  height: 150px;
+  border-radius: 15px;
+  padding: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  background-color: var(--backdropclr);
+  color: var(--naviBlue);
+  font-family:'Roboto', sans-serif;
+}
+.distanceTime h4{
+  border-bottom: 1px solid var(--naviBlue);
+}
+.distanceTime h5{
+  margin-top: 6px;
+}
+.distanceTime h3{
+  color: var(--white);
+}
+.distanceTime h6{
+  color: var(--white);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+}
 .zoom{
   position: absolute;
   z-index: 4;
@@ -821,6 +852,10 @@
   border: none;
   border-bottom: 1px solid var(--inputlines);
 }
+.addThings input[type=text]:focus{
+  outline: none;
+  border-bottom: 1px solid var(--black);
+}
 .addThings button{
   float: right;
   padding:7px 25px;
@@ -932,6 +967,15 @@
   color: var(--naviBlue);
   font-size: 1.3rem;
 }
+.details p{
+  font-size: 0.8rem;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  color: var(--naviBlue);
+}
+.details span{
+  text-decoration: underline;
+}
 .functionalOptions1 td, th{
   border: 1px solid var(--lines);
   color: var(--naviBlue);
@@ -961,22 +1005,15 @@
   border-collapse: separate;
   border-radius: 10px;
 }
-.functionalOptions1 table .dotCol{
-  padding: 15px 5px 5px 5px;
-}
-.functionalOptions1 table .dotsThree{
-  position: relative;
-}
 .functionalOptions1 table .dotsThree:hover{
   cursor: pointer;
 }
 .functionalOptions1 table .dotOptions{
-  background-color: white;
   width: 60px;
-  height: 50px;
+  height: 27px;
   position: absolute;
-  left: 20px;
-  top: 30px;
+  margin-top: -5px;
+  margin-left: 30px;
 }
 .functionalOptions1 table .dotOptions button{
   color: var(--naviBlue);
@@ -1009,6 +1046,7 @@
   text-align: center;
   left: 15%;
   letter-spacing: 1px;
+  transition: 1s ease ;
 }
 /*Error Page*/
 .errorPage{

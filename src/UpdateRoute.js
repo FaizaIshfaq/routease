@@ -23,7 +23,7 @@ function AddBus() {
                     <img src={menuIcon} />
                 </div>
             </div>
-            <NavLink exact to='/dashboard'>
+            <NavLink to='/dashboard'>
             <img className='backArrow' src={arrow} alt='back' /> 
             </NavLink>
             <div className='addThings lableSize'>
@@ -41,15 +41,15 @@ function AddBus() {
             </div>
             <div className='navbar'>
             <div className='nav'>
-            <NavLink exact to="/homeUser">
+            <NavLink to="/homeUser">
             <img src={Home} /></NavLink>
-            <NavLink exact to="javascript(void);">
+            <NavLink to="javascript(void);">
             <img src={mapIcon} /></NavLink>
-            <NavLink exact to="/dashboard">
+            <NavLink to="/dashboard">
             <img src={modelIcon} /></NavLink>
-            <NavLink exact to="javascript(void);">
+            <NavLink to="javascript(void);">
             <img src={modeIcon} /></NavLink>
-            <NavLink exact to="/adminProfile">
+            <NavLink to="/adminProfile">
             <img src={profileIcon} /></NavLink>
             </div>
             </div>

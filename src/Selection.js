@@ -9,17 +9,17 @@ function selection() {
     <div className='bg'>
       <div className='body'>
         <div className='select'>
-        <NavLink exact to='/'>
+        <NavLink to='/'>
         <img className='arrow' src={arrow} alt='back' /> 
         </NavLink>
           <div className='align1'>
             <img className='image' src={mobile} alt='mobile browser image' />
             <p>Find Your University route here</p>
             <div className='btngrp'>
-                <NavLink exact to='./login'>
+                <NavLink to='/login'>
                 <button className='loginbtn'>Login</button>
                 </NavLink>
-                <NavLink exact to='./signUp'>
+                <NavLink to='/signUp'>
                 <button className='signupbtn'>Sign Up</button>
                 </NavLink>
             </div>

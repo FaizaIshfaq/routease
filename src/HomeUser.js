@@ -48,11 +48,12 @@ function Selection() {
           </div>
         <div className='navbar'>
           <div className='nav'>
-          <NavLink exact to="/homeUser">
+          <NavLink to="/homeUser">
           <img src={ActiveHome} /></NavLink>
-          <img src={mapIcon} />
+          <NavLink to='/trackLocation'>
+          <img src={mapIcon} /></NavLink>
           <img src={modeIcon} />
-          <NavLink exact to="/userProfile">
+          <NavLink to="/userProfile">
           <img src={profileIcon} /></NavLink>
           </div>
         </div>
@@ -68,63 +69,19 @@ function Selection() {
           <div className={`stops ${stopState?'displayStop':'displaynotStop'}`} >
             <div className='stopdetail'>
             <img className='activeLocation' src={location} />
-            <p>Stop&nbsp;1</p>
+            <p>Dharampura</p>
             </div>
             <div className='line'></div>
             <div className='stopdetail'>
               <img src={stopIcon} />
-              <p>Stop&nbsp;2</p>
+              <p>Sadar</p>
             </div>
             <div className='line'></div>
             <div className='stopdetail'>
             <img src={stopIcon} />
-            <p>Stop&nbsp;3</p>
+            <p>Mughalpura</p>
             </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;4</p>
-            </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;5</p>
-            </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;6</p>
-            </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;7</p>
-            </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;8</p>
-            </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;9</p>
-            </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;10</p>
-            </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;11</p>
-            </div>
-            <div className='line'></div>
-            <div className='stopdetail'>
-            <img src={stopIcon} />
-            <p>Stop&nbsp;12</p>
-            </div>
+            
 
           </div>
           <div className={`route ${routeState?'displayroute':'displaynotroute'}`}>
@@ -152,17 +109,6 @@ function Selection() {
             <img src={stopIcon} />
             <p>Route&nbsp;5</p>
             </div>
-            <div className='line'></div>
-            <div className='routedetail'>
-            <img src={stopIcon} />
-            <p>Route&nbsp;6</p>
-            </div>
-            <div className='line'></div>
-            <div className='routedetail'>
-            <img src={stopIcon} />
-            <p>Route&nbsp;7</p>
-            </div>
-
           </div>
         </div>
         </div>

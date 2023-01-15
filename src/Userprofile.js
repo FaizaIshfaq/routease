@@ -32,17 +32,17 @@ function profile() {
                 <label>Password</label>
                 <div className='asteric'>*******</div>
                </div>
-               <NavLink exact to="/selection">
+               <NavLink to="/selection">
                <button className='logout'>Logout</button>
                </NavLink>
             </div>
             <div className='navbar'>
             <div className='nav'>
-            <NavLink exact to="/homeUser">
+            <NavLink to="/homeUser">
             <img src={Home} /></NavLink>
             <img src={mapIcon} />
             <img src={modeIcon} />
-            <NavLink exact to="/userProfile">
+            <NavLink to="/userProfile">
             <img src={profileIcon} /></NavLink>
             </div>
             </div>

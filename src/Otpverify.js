@@ -67,7 +67,7 @@ function OtpVerify() {
         <div className='bg' >
              <div className='body'>
         <div className='select1'>
-            <NavLink exact to='/resetPass'>
+            <NavLink to='/resetPass'>
             <img className='arrow' src={arrow} alt='back' /> 
             </NavLink>
             <div className='align2'>
@@ -88,7 +88,7 @@ function OtpVerify() {
                     </label><br/>
                     <p>Don't recieve OTP?&nbsp;<a className='resendlink' href='#'>Resend OTP</a>
                     </p>
-                    {/* <NavLink exact to="/login"> */}
+                    {/* <NavLink to="/login"> */}
                     <button className='btn2 btn4'>
                         Verify & Proceed
                     </button>

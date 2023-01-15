@@ -22,7 +22,7 @@ function ResetPass() {
         <div className='bg' >
              <div className='body'>
         <div className='select1 '>
-            <NavLink exact to='/forgetPass'>
+            <NavLink to='/forgetPass'>
             <img className='arrow' src={arrow} alt='back' /> 
             </NavLink>
             <div className='align2 '>
@@ -39,7 +39,7 @@ function ResetPass() {
                         <img className='icon1' src={lock} alt='passIcon' />
                        <input type="text" name="confirmPassword" placeholder="Confirm Password" onChange={handleChange} />
                     </label>
-                    {/* <NavLink exact to="/OtpVerify"> */}
+                    {/* <NavLink to="/OtpVerify"> */}
                     <button className='btn2'>
                         Submit
                     </button>
