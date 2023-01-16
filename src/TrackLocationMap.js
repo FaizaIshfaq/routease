@@ -5,8 +5,8 @@ import Maped from './Maped.js';
 import zoomIcon from './images/zoomIcon.svg';
 import menuIcon from './images/menuIcon.svg';
 import mapSearch from './images/mapSearch.svg';
-import ActiveHome from './images/homeActiveIcon.svg';
-import mapIcon from './images/mapIcon.svg';
+import homeIcon from './images/homeIcon.svg';
+import activemapIcon from './images/activemapicon.svg';
 import modeIcon from './images/modeIcon.svg';
 import profileIcon from './images/profileIcon.svg';
 import location from './images/location.svg';
@@ -15,8 +15,8 @@ import stopIcon from './images/stopIcon.svg';
 function Selection() {
   const [sidenavState,setsidenavState]=useState(false);
   const sidenavref=useRef();
-  const [routeState,setrouteState]=useState(false);
-  const [stopState,setstopState]=useState(true);
+  const [routeState,setrouteState]=useState(true);
+  const [stopState,setstopState]=useState(false);
 
 
   useEffect(()=>{
@@ -47,11 +47,11 @@ function Selection() {
               <h4>Route 1</h4>
               <div>
                 <h5>Distance</h5>
-                <h3>14.5</h3>
-                <h6>Kilometers</h6>
+                <h3>300</h3>
+                <h6>Meters</h6>
                 <h5>Time</h5>
-                <h3>5-5.5</h3>
-                <h6>Hours</h6>
+                <h3>2</h3>
+                <h6>Minutes</h6>
               </div>
           </div>
           <div className='zoom'>
@@ -60,8 +60,9 @@ function Selection() {
         <div className='navbar'>
           <div className='nav'>
           <NavLink to="/homeUser">
-          <img src={ActiveHome} /></NavLink>
-          <img src={mapIcon} />
+          <img src={homeIcon} /></NavLink>
+          <NavLink to='/trackLocation'>
+          <img src={activemapIcon} /></NavLink>
           <img src={modeIcon} />
           <NavLink to="/userProfile">
           <img src={profileIcon} /></NavLink>

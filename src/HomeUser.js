@@ -15,8 +15,8 @@ import stopIcon from './images/stopIcon.svg';
 function Selection() {
   const [sidenavState,setsidenavState]=useState(false);
   const sidenavref=useRef();
-  const [routeState,setrouteState]=useState(false);
-  const [stopState,setstopState]=useState(true);
+  const [routeState,setrouteState]=useState(true);
+  const [stopState,setstopState]=useState(false);
 
 
   useEffect(()=>{
